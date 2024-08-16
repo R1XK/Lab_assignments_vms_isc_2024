@@ -12,11 +12,12 @@ public class Lab_assignment_4 {
             int wt = sc.nextInt();
         System.out.println("Enter rate per gram: ");
             int rate = sc.nextInt();
-        System.out.println(ch == 'I'? "Enter Speacial tax amount: " : "");
-            int tax = sc.nextInt();
+    
+        System.out.println(ch == 'F'? "Enter Speacial tax amount: ": "");
+        int tax = ch == 'F'? sc.nextInt() : 0;
         
         // calculating cost using Ternary
-        int cost = (wt*rate) + (ch == 'I'? tax : 0);
+        int cost = (wt*rate) + (ch == 'F'? tax : 0);
 
         // printing the total cost
         System.out.println("Total cost: " + cost);
